@@ -14,7 +14,7 @@ public class Ksiazka extends ObjectPlus{
     private int dostepnaIloscSztuk;
 
 
-    private Ksiazka(String nazwa,
+    Ksiazka(String nazwa,
             String wydawca,
             String autor,
             int cena,
@@ -38,8 +38,6 @@ public class Ksiazka extends ObjectPlus{
         sprawdzCzyJestPromocja(rabat, promocja);
         sprawdzCzyDodatnie(dostepnaIloscSztuk);
         sprawdzCzyISBNPoprawny(ISBN);
-
-
     }
 
     private void sprawdzCzyDodatnie(int i){
