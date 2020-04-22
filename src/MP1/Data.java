@@ -12,65 +12,81 @@ class Data extends ObjectPlus{
          int miesiac,
          int rok,
          int godzina,
-         int minuta){
+         int minuta) throws inputException{
         super();
+        if (dzien < 0 || dzien > 31){throw new inputException("Niepoprawny format dnia.");}
         this.dzien = dzien;
+        if (miesiac < 0 || miesiac > 12){throw new inputException("Niepoprawny format miesiaca.");}
         this.miesiac = miesiac;
+        if (rok < 0 || rok > 9999){throw new inputException("Niepoprawny format roku.");}
         this.rok = rok;
+        if (godzina < 0 || godzina > 24){throw new inputException("Niepoprawny format godziny.");}
         this.godzina = godzina;
+        if (minuta < 0 || minuta > 60){throw new inputException("Niepoprawny format minuty.");}
         this.minuta = minuta;
-        sprawdzDzien(dzien);
-        sprawdzMiesiac(miesiac);
-        sprawdzRok(rok);
-        sprawdzGodzine(godzina);
-        sprawdzMinute(minuta);
     }
 
-    private void sprawdzDzien(int i){
-        try{
-            if (i<0||i>31){throw new notProperDataException();}
-        } catch (notProperDataException e){
-            System.out.println(e.getMessage());
-        }
+    public String toString(){
+        return "" + dzien + miesiac + rok + godzina + minuta;
     }
 
-    private void sprawdzMiesiac(int i){
-        try{
-            if (i<0||i>12){throw new notProperDataException();}
-        } catch (notProperDataException e){
-            System.out.println(e.getMessage());
-        }
+    public String toFormatedString(){
+        return "["  + dzien + "/"+ miesiac + "/"+ rok + "] ["+ godzina + ":"+ minuta + "]";
     }
 
-    private void sprawdzRok(int i){
-        try{
-            if (i<0||i>9999){throw new notProperDataException();}
-        } catch (notProperDataException e){
-            System.out.println(e.getMessage());
-        }
-    }
-
-    private void sprawdzGodzine(int i){
-        try{
-            if (i<0||i>24){throw new notProperDataException();}
-        } catch (notProperDataException e){
-            System.out.println(e.getMessage());
-        }
-    }
-
-    private void sprawdzMinute(int i){
-        try{
-            if (i<0||i>60){throw new notProperDataException();}
-        } catch (notProperDataException e){
-            System.out.println(e.getMessage());
-        }
+    public void printData(){
+        System.out.println(toFormatedString());
     }
 
     public static void main(String[] args){
-        new Data(1,1,1999,23,59);
-        new Data(9,11,2001,11,9);
-        new Data(19,4,2020,0,1);
-        new Data(6,12,2019,14,23);
-        new Data(9,11,966,12,0);
+        try {
+            new Data(1, 1, 1999, 23, 59);
+            new Data(9, 11, 2001, 11, 9);
+            new Data(19, 4, 2020, 0, 1);
+            new Data(6, 12, 2019, 14, 23);
+            new Data(9, 11, 966, 12, 0);
+        } catch (inputException ie){
+            ie.printStackTrace();
+        }
+    }
+
+    public int getDzien() {
+        return dzien;
+    }
+
+    public void setDzien(int dzien) {
+        this.dzien = dzien;
+    }
+
+    public int getMiesiac() {
+        return miesiac;
+    }
+
+    public void setMiesiac(int miesiac) {
+        this.miesiac = miesiac;
+    }
+
+    public int getRok() {
+        return rok;
+    }
+
+    public void setRok(int rok) {
+        this.rok = rok;
+    }
+
+    public int getGodzina() {
+        return godzina;
+    }
+
+    public void setGodzina(int godzina) {
+        this.godzina = godzina;
+    }
+
+    public int getMinuta() {
+        return minuta;
+    }
+
+    public void setMinuta(int minuta) {
+        this.minuta = minuta;
     }
 }

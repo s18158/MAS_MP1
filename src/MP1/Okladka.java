@@ -10,7 +10,9 @@ public class Okladka extends ObjectPlus{
     private Okladka(String sciezkaDoZdjeciaOkladki,
                     Ksiazka ksiazka){
         super();
+        if (sciezkaDoZdjeciaOkladki == null) { throw new NullPointerException("Ścieżka do okladki nie moze byc pusta.");}
         this.sciezkaDoZdjeciaOkladki = sciezkaDoZdjeciaOkladki;
+        //atrybut opcjonalny
         this.ksiazka = ksiazka;
     }
 
@@ -21,5 +23,21 @@ public class Okladka extends ObjectPlus{
         new Okladka("Okladki/o3.jpg",ksiazkaIterator.next());
         new Okladka("Okladki/o4.jpg",ksiazkaIterator.next());
         new Okladka("Okladki/o5.jpg",ksiazkaIterator.next());
+    }
+
+    public String getSciezkaDoZdjeciaOkladki() {
+        return sciezkaDoZdjeciaOkladki;
+    }
+
+    public void setSciezkaDoZdjeciaOkladki(String sciezkaDoZdjeciaOkladki) {
+        this.sciezkaDoZdjeciaOkladki = sciezkaDoZdjeciaOkladki;
+    }
+
+    public Ksiazka getKsiazka() {
+        return ksiazka;
+    }
+
+    public void setKsiazka(Ksiazka ksiazka) {
+        this.ksiazka = ksiazka;
     }
 }

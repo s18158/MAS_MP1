@@ -42,4 +42,28 @@ public class Bestsellery extends ObjectPlus{
         new Bestsellery(dataIterator.next(),dataIterator.next(),zestawKsiazek);
 
     }
+
+    public Data getOdKiedy() {
+        return odKiedy;
+    }
+
+    public void setOdKiedy(Data odKiedy) {
+        this.odKiedy = odKiedy;
+    }
+
+    public Data getDoKiedy() {
+        return doKiedy;
+    }
+
+    public void setDoKiedy(Data doKiedy) {
+        this.doKiedy = doKiedy;
+    }
+
+    public Set<Ksiazka> getZestawKsiazek() {
+        return zestawKsiazek;
+    }
+
+    public void setZestawKsiazek(Set<Ksiazka> zestawKsiazek) {
+        this.zestawKsiazek = zestawKsiazek;
+    }
 }
