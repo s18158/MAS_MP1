@@ -59,6 +59,7 @@ public class Seria extends ObjectPlus{
     }
 
     public void setTytulSerii(String tytulSerii) {
+        if ( tytulSerii == null ){throw new NullPointerException();}
         this.tytulSerii = tytulSerii;
     }
 
@@ -67,6 +68,7 @@ public class Seria extends ObjectPlus{
     }
 
     public void setZestawKsiazek(Set<Ksiazka> zestawKsiazek) {
+        if ( zestawKsiazek == null ){throw new NullPointerException();}
         this.zestawKsiazek = zestawKsiazek;
     }
 }

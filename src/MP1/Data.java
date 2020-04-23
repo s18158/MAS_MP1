@@ -54,7 +54,8 @@ class Data extends ObjectPlus{
         return dzien;
     }
 
-    public void setDzien(int dzien) {
+    public void setDzien(int dzien) throws inputException{
+        if (dzien < 0 || dzien > 31){throw new inputException("Niepoprawny format dnia.");}
         this.dzien = dzien;
     }
 
@@ -62,7 +63,8 @@ class Data extends ObjectPlus{
         return miesiac;
     }
 
-    public void setMiesiac(int miesiac) {
+    public void setMiesiac(int miesiac) throws inputException{
+        if (miesiac < 0 || miesiac > 12){throw new inputException("Niepoprawny format miesiaca.");}
         this.miesiac = miesiac;
     }
 
@@ -70,7 +72,8 @@ class Data extends ObjectPlus{
         return rok;
     }
 
-    public void setRok(int rok) {
+    public void setRok(int rok) throws inputException{
+        if (rok < 0 || rok > 9999){throw new inputException("Niepoprawny format roku.");}
         this.rok = rok;
     }
 
@@ -78,7 +81,8 @@ class Data extends ObjectPlus{
         return godzina;
     }
 
-    public void setGodzina(int godzina) {
+    public void setGodzina(int godzina) throws inputException{
+        if (godzina < 0 || godzina > 24){throw new inputException("Niepoprawny format godziny.");}
         this.godzina = godzina;
     }
 
@@ -86,7 +90,8 @@ class Data extends ObjectPlus{
         return minuta;
     }
 
-    public void setMinuta(int minuta) {
+    public void setMinuta(int minuta) throws inputException{
+        if (minuta < 0 || minuta > 60){throw new inputException("Niepoprawny format minuty.");}
         this.minuta = minuta;
     }
 }

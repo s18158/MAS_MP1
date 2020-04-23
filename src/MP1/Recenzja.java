@@ -43,6 +43,7 @@ public class Recenzja extends ObjectPlus {
     }
 
     public void setTytul(String tytul) {
+        if ( tytul == null ){throw new NullPointerException();}
         this.tytul = tytul;
     }
 
@@ -50,7 +51,8 @@ public class Recenzja extends ObjectPlus {
         return ocena;
     }
 
-    public void setOcena(int ocena) {
+    public void setOcena(int ocena) throws inputException{
+        if ( ocena < 1 || ocena > 5 ){throw new inputException();}
         this.ocena = ocena;
     }
 

@@ -47,6 +47,7 @@ public class Wystawa extends ObjectPlus{
     }
 
     public void setMotywPrzewodni(String motywPrzewodni) {
+        if ( motywPrzewodni == null ){throw new NullPointerException();}
         this.motywPrzewodni = motywPrzewodni;
     }
 
@@ -55,6 +56,7 @@ public class Wystawa extends ObjectPlus{
     }
 
     public void setKomentarz(String komentarz) {
+        if ( komentarz == null ){throw new NullPointerException();}
         this.komentarz = komentarz;
     }
 }

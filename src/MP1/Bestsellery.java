@@ -15,8 +15,11 @@ public class Bestsellery extends ObjectPlus{
                     Data doKiedy,
                     Set<Ksiazka> zestawKsiazek){
         super();
+        if ( odKiedy == null ){throw new NullPointerException();}
         this.odKiedy = odKiedy;
+        if ( doKiedy == null ){throw new NullPointerException();}
         this.doKiedy = doKiedy;
+        if ( zestawKsiazek == null ){throw new NullPointerException();}
         this.zestawKsiazek = zestawKsiazek;
     }
 
@@ -48,6 +51,7 @@ public class Bestsellery extends ObjectPlus{
     }
 
     public void setOdKiedy(Data odKiedy) {
+        if ( odKiedy == null ){throw new NullPointerException();}
         this.odKiedy = odKiedy;
     }
 
@@ -56,6 +60,7 @@ public class Bestsellery extends ObjectPlus{
     }
 
     public void setDoKiedy(Data doKiedy) {
+        if ( doKiedy == null ){throw new NullPointerException();}
         this.doKiedy = doKiedy;
     }
 
@@ -64,6 +69,7 @@ public class Bestsellery extends ObjectPlus{
     }
 
     public void setZestawKsiazek(Set<Ksiazka> zestawKsiazek) {
+        if ( zestawKsiazek == null ){throw new NullPointerException();}
         this.zestawKsiazek = zestawKsiazek;
     }
 }

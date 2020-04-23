@@ -67,7 +67,8 @@ public class Zamowienie extends ObjectPlus {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(int ID) throws inputException{
+        if ( ID == 0 ){throw new inputException();}
         this.ID = ID;
     }
 
@@ -76,6 +77,7 @@ public class Zamowienie extends ObjectPlus {
     }
 
     public void setAdres(String adres) {
+        if ( adres == null ){throw new NullPointerException();}
         this.adres = adres;
     }
 
@@ -83,7 +85,8 @@ public class Zamowienie extends ObjectPlus {
         return numerTelefonu;
     }
 
-    public void setNumerTelefonu(int numerTelefonu) {
+    public void setNumerTelefonu(int numerTelefonu) throws validPhoneNumerException{
+        if (String.valueOf(numerTelefonu).length()!=9){throw new validPhoneNumerException();}
         this.numerTelefonu = numerTelefonu;
     }
 
@@ -92,6 +95,7 @@ public class Zamowienie extends ObjectPlus {
     }
 
     public void setMetodaPlatnosci(enumMetodaPlatnosci metodaPlatnosci) {
+        if ( metodaPlatnosci == null ){throw new NullPointerException();}
         this.metodaPlatnosci = metodaPlatnosci;
     }
 
@@ -100,6 +104,7 @@ public class Zamowienie extends ObjectPlus {
     }
 
     public void setStatus(enumStatus status) {
+        if ( status == null ){throw new NullPointerException();}
         this.status = status;
     }
 
@@ -108,6 +113,7 @@ public class Zamowienie extends ObjectPlus {
     }
 
     public void setZamowioneKsiazki(Set<SprzedanaKsiazka> zamowioneKsiazki) {
+
         this.zamowioneKsiazki = zamowioneKsiazki;
     }
 }

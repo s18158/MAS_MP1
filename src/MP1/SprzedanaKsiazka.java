@@ -40,7 +40,8 @@ public class SprzedanaKsiazka extends Ksiazka {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(int ID) throws inputException{
+        if ( ID == 0 ){throw new inputException();}
         this.ID = ID;
     }
 
@@ -49,6 +50,7 @@ public class SprzedanaKsiazka extends Ksiazka {
     }
 
     public void setDataSprzedarzy(Data dataSprzedarzy) {
+        if ( dataSprzedarzy == null ){throw new NullPointerException();}
         this.dataSprzedarzy = dataSprzedarzy;
     }
 }

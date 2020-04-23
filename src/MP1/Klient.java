@@ -40,6 +40,7 @@ public class Klient extends Konto {
     }
 
     public void setIDKlienta(int IDKlienta) {
+        if (IDKlienta == 0 ){throw new NullPointerException("ID Klienta nie może być puste.");}
         this.IDKlienta = IDKlienta;
     }
 
@@ -48,6 +49,7 @@ public class Klient extends Konto {
     }
 
     public void setNumerKontaBankowego(long numerKontaBankowego) {
+        if (numerKontaBankowego == 0 ){throw new NullPointerException("Numer konta bankowego nie może być pusty.");}
         this.numerKontaBankowego = numerKontaBankowego;
     }
 }

@@ -54,6 +54,7 @@ public class Ksiazka extends ObjectPlus{
     }
 
     public void setNazwa(String nazwa) {
+        if ( nazwa == null ){throw new NullPointerException("Nazwa nie może być pusta.");}
         this.nazwa = nazwa;
     }
 
@@ -62,6 +63,7 @@ public class Ksiazka extends ObjectPlus{
     }
 
     public void setWydawca(String wydawca) {
+        if ( wydawca == null ){throw new NullPointerException("Wydawca nie może być pusty.");}
         this.wydawca = wydawca;
     }
 
@@ -70,6 +72,7 @@ public class Ksiazka extends ObjectPlus{
     }
 
     public void setAutor(String autor) {
+        if ( autor == null ){throw new NullPointerException("Autor nie może być pusty.");}
         this.autor = autor;
     }
 
@@ -77,7 +80,8 @@ public class Ksiazka extends ObjectPlus{
         return cena;
     }
 
-    public void setCena(int cena) {
+    public void setCena(int cena) throws inputException{
+        if ( cena == 0 || cena < 0 ){throw new inputException();}
         this.cena = cena;
     }
 
@@ -101,7 +105,8 @@ public class Ksiazka extends ObjectPlus{
         return ISBN;
     }
 
-    public void setISBN(String ISBN) {
+    public void setISBN(String ISBN) throws notISBNException{
+        if (ISBN.length()!=13){throw new notISBNException();}
         this.ISBN = ISBN;
     }
 
@@ -109,7 +114,8 @@ public class Ksiazka extends ObjectPlus{
         return dostepnaIloscSztuk;
     }
 
-    public void setDostepnaIloscSztuk(int dostepnaIloscSztuk) {
+    public void setDostepnaIloscSztuk(int dostepnaIloscSztuk) throws inputException{
+        if ( dostepnaIloscSztuk < 0 ){throw new inputException();}
         this.dostepnaIloscSztuk = dostepnaIloscSztuk;
     }
 }

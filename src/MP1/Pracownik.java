@@ -49,7 +49,8 @@ public class Pracownik extends Konto {
         return IDPracownika;
     }
 
-    public void setIDPracownika(int IDPracownika) {
+    public void setIDPracownika(int IDPracownika) throws inputException{
+        if (IDPracownika == 0) { throw new inputException("ID Pracownika nie może być puste.");}
         this.IDPracownika = IDPracownika;
     }
 
@@ -58,6 +59,7 @@ public class Pracownik extends Konto {
     }
 
     public void setStopienWFirmie(Stopien stopienWFirmie) {
+        if (stopienWFirmie == null) { throw new NullPointerException("Stopien nie może być pusty.");}
         this.stopienWFirmie = stopienWFirmie;
     }
 
@@ -66,6 +68,7 @@ public class Pracownik extends Konto {
     }
 
     public void setMailSluzbowy(String mailSluzbowy) {
+        if (mailSluzbowy == null) { throw new NullPointerException("Mail nie możeby być pusty.");}
         this.mailSluzbowy = mailSluzbowy;
     }
 
@@ -73,7 +76,8 @@ public class Pracownik extends Konto {
         return firmowyNrTelefonu;
     }
 
-    public void setFirmowyNrTelefonu(int firmowyNrTelefonu) {
+    public void setFirmowyNrTelefonu(int firmowyNrTelefonu) throws inputException {
+        if (firmowyNrTelefonu == 0) { throw new inputException("Firmowy nr telefonu nie moze byc pusty.");}
         this.firmowyNrTelefonu = firmowyNrTelefonu;
     }
 }

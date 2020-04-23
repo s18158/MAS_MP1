@@ -32,6 +32,7 @@ public class Konto extends ObjectPlus {
         this.nazwisko = nazwisko;
         if (mail == null ){throw new NullPointerException("Mail nie może być pusty.");}
         this.mail = mail;
+        if (dataUrodzenia == null ){throw new NullPointerException("Data utowrzenia konta nie może być pusta.");}
         this.dataUrodzenia = dataUrodzenia;
         if (String.valueOf(numerTelefonu).length()!=9){throw new validPhoneNumerException();}
         this.numerTelefonu = numerTelefonu;
@@ -55,7 +56,8 @@ public class Konto extends ObjectPlus {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(int ID) throws inputException{
+        if (ID == 0 ) {throw new inputException("ID nie moze byc puste.");}
         this.ID = ID;
     }
 
@@ -64,6 +66,7 @@ public class Konto extends ObjectPlus {
     }
 
     public void setImie(String imie) {
+        if (imie == null ){throw new NullPointerException("Okno Imię nie może być puste.");}
         this.imie = imie;
     }
 
@@ -72,6 +75,7 @@ public class Konto extends ObjectPlus {
     }
 
     public void setNazwisko(String nazwisko) {
+        if (nazwisko == null ){throw new NullPointerException("Okno Nazwisko nie może być puste.");}
         this.nazwisko = nazwisko;
     }
 
@@ -80,6 +84,7 @@ public class Konto extends ObjectPlus {
     }
 
     public void setMail(String mail) {
+        if (mail == null ){throw new NullPointerException("Mail nie może być pusty.");}
         this.mail = mail;
     }
 
@@ -88,6 +93,7 @@ public class Konto extends ObjectPlus {
     }
 
     public void setDataUrodzenia(Data dataUrodzenia) {
+        if (dataUrodzenia == null ){throw new NullPointerException("Data utowrzenia konta nie może być pusta.");}
         this.dataUrodzenia = dataUrodzenia;
     }
 
@@ -104,7 +110,8 @@ public class Konto extends ObjectPlus {
         return numerTelefonu;
     }
 
-    public void setNumerTelefonu(int numerTelefonu) {
+    public void setNumerTelefonu(int numerTelefonu) throws validPhoneNumerException{
+        if (String.valueOf(numerTelefonu).length()!=9){throw new validPhoneNumerException();}
         this.numerTelefonu = numerTelefonu;
     }
 
@@ -113,6 +120,7 @@ public class Konto extends ObjectPlus {
     }
 
     public void setLogin(String login) {
+        if (login == null ){throw new NullPointerException("Login nie może być pusty.");}
         this.login = login;
     }
 
@@ -121,6 +129,7 @@ public class Konto extends ObjectPlus {
     }
 
     public void setHaslo(String haslo) {
+        if (haslo == null ){throw new NullPointerException("Hasło nie może być puste.");}
         this.haslo = haslo;
     }
 }

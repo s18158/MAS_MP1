@@ -30,6 +30,7 @@ public class Okladka extends ObjectPlus{
     }
 
     public void setSciezkaDoZdjeciaOkladki(String sciezkaDoZdjeciaOkladki) {
+        if (sciezkaDoZdjeciaOkladki == null) { throw new NullPointerException("Ścieżka do okladki nie moze byc pusta.");}
         this.sciezkaDoZdjeciaOkladki = sciezkaDoZdjeciaOkladki;
     }
 
