@@ -13,7 +13,9 @@ public class Seria extends ObjectPlus{
     private Seria(String tytulSerii,
                   Set<Ksiazka> zestawKsiazek){
         super();
+        if ( tytulSerii == null ){throw new NullPointerException();}
         this.tytulSerii = tytulSerii;
+        if ( zestawKsiazek == null ){throw new NullPointerException();}
         this.zestawKsiazek = zestawKsiazek;
     }
 
@@ -50,5 +52,21 @@ public class Seria extends ObjectPlus{
             zestawKsiazek.add(ksiazkaIterator.next());
         }
         new Seria("50 Shades of Grey",zestawKsiazek);
+    }
+
+    public String getTytulSerii() {
+        return tytulSerii;
+    }
+
+    public void setTytulSerii(String tytulSerii) {
+        this.tytulSerii = tytulSerii;
+    }
+
+    public Set<Ksiazka> getZestawKsiazek() {
+        return zestawKsiazek;
+    }
+
+    public void setZestawKsiazek(Set<Ksiazka> zestawKsiazek) {
+        this.zestawKsiazek = zestawKsiazek;
     }
 }

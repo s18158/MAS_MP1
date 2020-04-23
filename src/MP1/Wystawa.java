@@ -14,7 +14,9 @@ public class Wystawa extends ObjectPlus{
                     String komentarz,
                     Set<Ksiazka> zestawKsiazek){
         super();
+        if ( motywPrzewodni == null ){throw new NullPointerException();}
         this.motywPrzewodni = motywPrzewodni;
+        if ( komentarz == null ){throw new NullPointerException();}
         this.komentarz = komentarz;
     }
 
@@ -38,5 +40,21 @@ public class Wystawa extends ObjectPlus{
         }
         new Wystawa("Niespotykane historie","Kolekcja najbardziej szczegolowych ksiazek historycznych.",zestawKsiazek);
 
+    }
+
+    public String getMotywPrzewodni() {
+        return motywPrzewodni;
+    }
+
+    public void setMotywPrzewodni(String motywPrzewodni) {
+        this.motywPrzewodni = motywPrzewodni;
+    }
+
+    public String getKomentarz() {
+        return komentarz;
+    }
+
+    public void setKomentarz(String komentarz) {
+        this.komentarz = komentarz;
     }
 }

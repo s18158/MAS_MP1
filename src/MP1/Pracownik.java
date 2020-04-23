@@ -44,4 +44,36 @@ public class Pracownik extends Konto {
         new Pracownik(random.nextInt(),"Maciek","Maciejewski","mm4@gmail.com",dataIterator.next(),123332211,"4","4",random.nextInt(),Stopien.MENAGER,"sm4@gmail.com",123332211);
         new Pracownik(random.nextInt(),"Mateusz","Mateuszczyk","mm5@gmail.com", dataIterator.next(),123123321,"5","5",random.nextInt(),Stopien.PRACOWNIK,"sm5@gmail.com",123123321);
     }
+
+    public int getIDPracownika() {
+        return IDPracownika;
+    }
+
+    public void setIDPracownika(int IDPracownika) {
+        this.IDPracownika = IDPracownika;
+    }
+
+    public Stopien getStopienWFirmie() {
+        return stopienWFirmie;
+    }
+
+    public void setStopienWFirmie(Stopien stopienWFirmie) {
+        this.stopienWFirmie = stopienWFirmie;
+    }
+
+    public String getMailSluzbowy() {
+        return mailSluzbowy;
+    }
+
+    public void setMailSluzbowy(String mailSluzbowy) {
+        this.mailSluzbowy = mailSluzbowy;
+    }
+
+    public int getFirmowyNrTelefonu() {
+        return firmowyNrTelefonu;
+    }
+
+    public void setFirmowyNrTelefonu(int firmowyNrTelefonu) {
+        this.firmowyNrTelefonu = firmowyNrTelefonu;
+    }
 }

@@ -21,14 +21,18 @@ public class Zamowienie extends ObjectPlus {
                String adres,
                int numerTelefonu,
                enumMetodaPlatnosci metodaPlatnosci,
-               enumStatus status){
+               enumStatus status) throws inputException, validPhoneNumerException{
         super();
+        if ( ID == 0 ){throw new inputException();}
         this.ID = ID;
+        if ( adres == null ){throw new NullPointerException();}
         this.adres = adres;
+        if (String.valueOf(numerTelefonu).length()!=9){throw new validPhoneNumerException();}
         this.numerTelefonu = numerTelefonu;
+        if ( metodaPlatnosci == null ){throw new NullPointerException();}
         this.metodaPlatnosci = metodaPlatnosci;
+        if ( status == null ){throw new NullPointerException();}
         this.status = status;
-        sprawdzCzyNumerTelefonuJestPoprawny(numerTelefonu);
     }
 
     public void addSoldBook(SprzedanaKsiazka sk){
@@ -39,19 +43,7 @@ public class Zamowienie extends ObjectPlus {
         zamowioneKsiazki.addAll(sk);
     }
 
-    public Set<SprzedanaKsiazka> getZamowioneKsiazki() {
-        return zamowioneKsiazki;
-    }
-
-    private void sprawdzCzyNumerTelefonuJestPoprawny(int i){
-        try{
-            if (String.valueOf(i).length()!=9){throw new validPhoneNumerException();}
-        } catch (validPhoneNumerException e){
-            System.out.println(e.getMessage());
-        }
-    }
-
-    public static void main(String[] args) throws  ClassNotFoundException {
+    public static void main(String[] args) throws  ClassNotFoundException, inputException, validPhoneNumerException {
         Iterator<SprzedanaKsiazka> sprzedanaKsiazkaIterator = ObjectPlus.getExtent(SprzedanaKsiazka.class).iterator();
         Set<SprzedanaKsiazka> sprzedanaKsiazka = new HashSet<>();
         Random random = new Random();
@@ -69,5 +61,53 @@ public class Zamowienie extends ObjectPlus {
         new Zamowienie(random.nextInt(),"Adres 4",123123123,enumMetodaPlatnosci.GOTOWKA,enumStatus.ZREALIZOWANY).addSoldBook(sprzedanaKsiazkaIterator.next());
         new Zamowienie(random.nextInt(),"Adres 5",111222333,enumMetodaPlatnosci.KARTA,enumStatus.W_REALIZACJI).addSoldBook(sprzedanaKsiazkaIterator.next());
 
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    public String getAdres() {
+        return adres;
+    }
+
+    public void setAdres(String adres) {
+        this.adres = adres;
+    }
+
+    public int getNumerTelefonu() {
+        return numerTelefonu;
+    }
+
+    public void setNumerTelefonu(int numerTelefonu) {
+        this.numerTelefonu = numerTelefonu;
+    }
+
+    public enumMetodaPlatnosci getMetodaPlatnosci() {
+        return metodaPlatnosci;
+    }
+
+    public void setMetodaPlatnosci(enumMetodaPlatnosci metodaPlatnosci) {
+        this.metodaPlatnosci = metodaPlatnosci;
+    }
+
+    public enumStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(enumStatus status) {
+        this.status = status;
+    }
+
+    public Set<SprzedanaKsiazka> getZamowioneKsiazki() {
+        return zamowioneKsiazki;
+    }
+
+    public void setZamowioneKsiazki(Set<SprzedanaKsiazka> zamowioneKsiazki) {
+        this.zamowioneKsiazki = zamowioneKsiazki;
     }
 }
