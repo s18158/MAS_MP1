@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f32645b-b368-4f7c-9022-da15c55ae6ae" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/MP1/Ksiazka.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MP1/Ksiazka.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MP1/WystawaKsiazka.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MP1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MP1/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MP1/Okladka.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +19,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MP1/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
+            <state relative-caret-position="224">
+              <caret line="199" column="11" lean-forward="true" selection-start-line="199" selection-start-column="11" selection-end-line="199" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -28,7 +28,7 @@
       <file leaf-file-name="Ksiazka.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MP1/Ksiazka.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="1228">
               <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
               <folding>
                 <element signature="method#setNazwa#0;class#Ksiazka#0" />
@@ -39,6 +39,15 @@
                 <element signature="method#setDostepnaIloscSztuk#0;class#Ksiazka#0" />
                 <element signature="method#setSciezkaDoZdjeciaOkladki#0;class#Okladka#0;class#Ksiazka#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WystawaKsiazka.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MP1/WystawaKsiazka.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -62,7 +71,7 @@
       <file leaf-file-name="ObjectPlusPlus.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MP1/ObjectPlusPlus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1290">
+            <state relative-caret-position="1262">
               <caret line="88" selection-start-line="88" selection-end-line="88" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -137,6 +146,7 @@
         <option value="$PROJECT_DIR$/src/MP1/Bestsellery.java" />
         <option value="$PROJECT_DIR$/src/MP1/Promocja.java" />
         <option value="$PROJECT_DIR$/src/MP1/Ksiazka.java" />
+        <option value="$PROJECT_DIR$/src/MP1/WystawaKsiazka.java" />
         <option value="$PROJECT_DIR$/src/MP1/Main.java" />
       </list>
     </option>
@@ -323,7 +333,7 @@
       <workItem from="1587666760204" duration="1627000" />
       <workItem from="1588007942951" duration="422000" />
       <workItem from="1589902885849" duration="306000" />
-      <workItem from="1590253078006" duration="5892000" />
+      <workItem from="1590253078006" duration="7536000" />
     </task>
     <task id="LOCAL-00001" summary="meczace reczne wpisywanie danych">
       <created>1587243102412</created>
@@ -367,14 +377,29 @@
       <option name="project" value="LOCAL" />
       <updated>1590263571211</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="v2.002">
+      <created>1590265554966</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1590265554966</updated>
+    </task>
+    <task id="LOCAL-00008" summary="v2.01">
+      <created>1590266700080</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1590266700080</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26995000" />
+    <option name="totallyTimeSpent" value="28639000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -386,13 +411,13 @@
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19527897" />
       <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32948717" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -419,7 +444,9 @@
     <MESSAGE value="v1.04" />
     <MESSAGE value="v2.00" />
     <MESSAGE value="v2.001" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2.001" />
+    <MESSAGE value="v2.002" />
+    <MESSAGE value="v2.01" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2.01" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -427,16 +454,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/MP1/Okladka.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="method#setSciezkaDoZdjeciaOkladki#0;class#Okladka#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MP1/Pracownik.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -834,16 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MP1/ObjectPlusPlus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MP1/ObjectPlus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -881,9 +888,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MP1/ObjectPlusPlus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1262">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MP1/Ksiazka.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="1228">
           <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
           <folding>
             <element signature="method#setNazwa#0;class#Ksiazka#0" />
@@ -897,10 +914,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MP1/WystawaKsiazka.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MP1/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
+        <state relative-caret-position="224">
+          <caret line="199" column="11" lean-forward="true" selection-start-line="199" selection-start-column="11" selection-end-line="199" selection-end-column="11" />
         </state>
       </provider>
     </entry>

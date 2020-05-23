@@ -192,7 +192,10 @@ public class Main {
 
             ObjectPlus.getExtent(Zamowienie.class).iterator().next().addLink("sprzedanaKsiazka","zamowienie",ObjectPlus.getExtent(SprzedanaKsiazka.class).iterator().next(),ObjectPlus.getExtent(SprzedanaKsiazka.class).iterator().next().getID());
 
+            new WystawaKsiazka(dataList.get(random.nextInt(dataList.size())),dataList.get(random.nextInt(dataList.size())));
 
+            ksiazkaList.get(random.nextInt(ksiazkaList.size())).addLink("wystawaKsiazka", "ksiazka", ObjectPlus.getExtent(WystawaKsiazka.class).iterator().next());
+            ObjectPlus.getExtent(Wystawa.class).iterator().next().addLink("wystawaKsiazka", "wystawa", ObjectPlus.getExtent(WystawaKsiazka.class).iterator().next());
 
         try
         {
