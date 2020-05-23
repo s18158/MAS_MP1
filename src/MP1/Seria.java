@@ -1,11 +1,8 @@
 package MP1;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Random;
 import java.util.Set;
 
-public class Seria extends ObjectPlus{
+public class Seria extends ObjectPlusPlus{
 
     private String tytulSerii;
     private Set<Ksiazka> zestawKsiazek;

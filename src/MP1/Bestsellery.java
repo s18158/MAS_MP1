@@ -1,11 +1,8 @@
 package MP1;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Random;
 import java.util.Set;
 
-public class Bestsellery extends ObjectPlus{
+public class Bestsellery extends ObjectPlusPlus{
 
     private Data odKiedy;
     private Data doKiedy;

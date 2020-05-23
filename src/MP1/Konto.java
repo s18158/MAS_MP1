@@ -1,6 +1,6 @@
 package MP1;
 
-public class Konto extends ObjectPlus {
+public class Konto extends ObjectPlusPlus{
 
     private int ID;
     private String imie;

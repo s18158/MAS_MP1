@@ -1,7 +1,5 @@
 package MP1;
 
-import java.util.Iterator;
-
 class Promocja {
 
     Data odKiedy;

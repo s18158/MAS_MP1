@@ -3,7 +3,7 @@ package MP1;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Zamowienie extends ObjectPlus {
+public class Zamowienie extends ObjectPlusPlus {
 
     enum enumMetodaPlatnosci { KARTA, GOTOWKA, KOD_PROMOCYJNY}
     enum enumStatus { W_REALIZACJI, ZREALIZOWANY, ANULOWANY}

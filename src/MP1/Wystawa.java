@@ -2,7 +2,7 @@ package MP1;
 
 import java.util.Set;
 
-public class Wystawa extends ObjectPlus{
+public class Wystawa extends ObjectPlusPlus{
 
     private String motywPrzewodni;
     private String komentarz;

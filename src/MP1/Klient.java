@@ -1,8 +1,5 @@
 package MP1;
 
-import java.util.Iterator;
-import java.util.Random;
-
 public class Klient extends Konto {
 
     private int IDKlienta;

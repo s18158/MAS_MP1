@@ -1,6 +1,6 @@
 package MP1;
 
-class Data extends ObjectPlus{
+class Data extends ObjectPlusPlus{
 
     private int dzien;
     private int miesiac;

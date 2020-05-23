@@ -1,8 +1,6 @@
 package MP1;
 
-import java.util.Iterator;
-
-public class Recenzja extends ObjectPlus {
+public class Recenzja extends ObjectPlusPlus{
 
     private String tytul;
     private int ocena;

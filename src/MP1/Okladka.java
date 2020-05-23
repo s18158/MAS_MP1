@@ -1,8 +1,6 @@
 package MP1;
 
-import java.util.Iterator;
-
-public class Okladka extends ObjectPlus{
+public class Okladka extends ObjectPlusPlus{
 
     private String sciezkaDoZdjeciaOkladki;
     private Ksiazka ksiazka;

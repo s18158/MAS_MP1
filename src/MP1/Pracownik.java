@@ -1,8 +1,5 @@
 package MP1;
 
-import java.util.Iterator;
-import java.util.Random;
-
 public class Pracownik extends Konto {
 
     enum Stopien {DYREKTOR, MENAGER, ADMINISTRATOR, KIEROWNIK_GRUPY, PRACOWNIK}
