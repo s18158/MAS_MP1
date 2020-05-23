@@ -36,7 +36,6 @@ public class Main {
         Random random = new Random();
         zestawKsiazek.clear();
 
-        {
 
             new Data(1, 1, 1999, 23, 59);
             new Data(9, 11, 2001, 11, 9);
@@ -188,8 +187,10 @@ public class Main {
             new Zamowienie(random.nextInt(), "Adres 4", 123123123, Zamowienie.enumMetodaPlatnosci.GOTOWKA, Zamowienie.enumStatus.ZREALIZOWANY).addSoldBook(sprzedanaKsiazkaList.get(random.nextInt(sprzedanaKsiazkaList.size())));
             new Zamowienie(random.nextInt(), "Adres 5", 111222333, Zamowienie.enumMetodaPlatnosci.KARTA, Zamowienie.enumStatus.W_REALIZACJI).addSoldBook(sprzedanaKsiazkaList.get(random.nextInt(sprzedanaKsiazkaList.size())));
 
-        }
 
+            ksiazkaList.get(random.nextInt(ksiazkaList.size())).addLink("wystawa","ksiazka",ObjectPlus.getExtent(Wystawa.class).iterator().next());
+
+            ObjectPlus.getExtent(Zamowienie.class).iterator().next().addLink("sprzedanaKsiazka","zamowienie",ObjectPlus.getExtent(SprzedanaKsiazka.class).iterator().next(),ObjectPlus.getExtent(SprzedanaKsiazka.class).iterator().next().getID());
 
 
 
