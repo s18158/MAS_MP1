@@ -1,6 +1,6 @@
 package MP1;
 
-class Promocja {
+class Promocja extends ObjectPlusPlus{
 
     Data odKiedy;
     Data doKiedy;
@@ -11,6 +11,7 @@ class Promocja {
              Data doKiedy,
              int rabatWProcentach,
              int rabat) throws inputException,properPercentSaleException{
+        super();
         if ( odKiedy == null ){throw new inputException();}
         this.odKiedy = odKiedy;
         if ( doKiedy == null ){throw new inputException();}
