@@ -35,16 +35,6 @@ public class Pracownik extends Konto {
         this.firmowyNrTelefonu = firmowyNrTelefonu;
     }
 
-    public static void main(String[] args) throws ClassNotFoundException,NullPointerException, inputException, validPhoneNumerException {
-        Iterator<Data> dataIterator = ObjectPlus.getExtent(Data.class).iterator();
-        Random random = new Random();
-        new Pracownik(random.nextInt(),"Marta","Martowska","mm1@gmail.com",dataIterator.next(),123123123,"1","1",random.nextInt(),Stopien.ADMINISTRATOR,"sm1@gmail.com",123123123);
-        new Pracownik(random.nextInt(),"Marcin","Marciniuk","mm2@gmail.com",dataIterator.next(),123123111,"2","2",random.nextInt(),Stopien.DYREKTOR,"sm2@gmail.com",123123111);
-        new Pracownik(random.nextInt(),"Mariusz","Mariuszewski","mm3@gmail.com",dataIterator.next(),123112233,"3","3",random.nextInt(),Stopien.KIEROWNIK_GRUPY,"sm3@gmail.com",123112233);
-        new Pracownik(random.nextInt(),"Maciek","Maciejewski","mm4@gmail.com",dataIterator.next(),123332211,"4","4",random.nextInt(),Stopien.MENAGER,"sm4@gmail.com",123332211);
-        new Pracownik(random.nextInt(),"Mateusz","Mateuszczyk","mm5@gmail.com", dataIterator.next(),123123321,"5","5",random.nextInt(),Stopien.PRACOWNIK,"sm5@gmail.com",123123321);
-    }
-
     public int getIDPracownika() {
         return IDPracownika;
     }

@@ -8,7 +8,7 @@ class Data extends ObjectPlus{
     private int godzina;
     private int minuta;
 
-    private Data(int dzien,
+    Data(int dzien,
          int miesiac,
          int rok,
          int godzina,
@@ -36,18 +36,6 @@ class Data extends ObjectPlus{
 
     public void printData(){
         System.out.println(toFormatedString());
-    }
-
-    public static void main(String[] args){
-        try {
-            new Data(1, 1, 1999, 23, 59);
-            new Data(9, 11, 2001, 11, 9);
-            new Data(19, 4, 2020, 0, 1);
-            new Data(6, 12, 2019, 14, 23);
-            new Data(9, 11, 966, 12, 0);
-        } catch (inputException ie){
-            ie.printStackTrace();
-        }
     }
 
     public int getDzien() {

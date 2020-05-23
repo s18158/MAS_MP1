@@ -32,15 +32,6 @@ class Promocja {
         }
     }
 
-    public static void main(String[] args) throws ClassNotFoundException,inputException,properPercentSaleException{
-        Iterator<Data> dataIterator = ObjectPlus.getExtent(Data.class).iterator();
-        new Promocja(dataIterator.next(),dataIterator.next(),60,0);
-        new Promocja(dataIterator.next(),dataIterator.next(),0,500);
-        new Promocja(dataIterator.next(),dataIterator.next(),0,1000);
-        new Promocja(dataIterator.next(),dataIterator.next(),10,0);
-        new Promocja(dataIterator.next(),dataIterator.next(),80,0);
-    }
-
     public Data getOdKiedy() {
         return odKiedy;
     }

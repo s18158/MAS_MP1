@@ -28,16 +28,6 @@ public class Recenzja extends ObjectPlus {
         this.ksiazka = ksiazka;
     }
 
-    public static void main(String[] args) throws ClassNotFoundException, inputException {
-        Iterator<Ksiazka> ksiazkaIterator = ObjectPlus.getExtent(Ksiazka.class).iterator();
-        Iterator<Konto> kontoIterator = ObjectPlus.getExtent(Konto.class).iterator();
-        new Recenzja("1",1,"1").setKontoIKsiazka(kontoIterator.next(),ksiazkaIterator.next());
-        new Recenzja("2",2,"2").setKontoIKsiazka(kontoIterator.next(),ksiazkaIterator.next());
-        new Recenzja("3",3,"3").setKontoIKsiazka(kontoIterator.next(),ksiazkaIterator.next());
-        new Recenzja("4",4,"4").setKontoIKsiazka(kontoIterator.next(),ksiazkaIterator.next());
-        new Recenzja("5",5,"5").setKontoIKsiazka(kontoIterator.next(),ksiazkaIterator.next());
-    }
-
     public String getTytul() {
         return tytul;
     }

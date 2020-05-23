@@ -1,8 +1,6 @@
 package MP1;
 
 import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Random;
 import java.util.Set;
 
 public class Zamowienie extends ObjectPlus {
@@ -41,26 +39,6 @@ public class Zamowienie extends ObjectPlus {
 
     public void addSoldBook(Set<SprzedanaKsiazka> sk){
         zamowioneKsiazki.addAll(sk);
-    }
-
-    public static void main(String[] args) throws  ClassNotFoundException, inputException, validPhoneNumerException {
-        Iterator<SprzedanaKsiazka> sprzedanaKsiazkaIterator = ObjectPlus.getExtent(SprzedanaKsiazka.class).iterator();
-        Set<SprzedanaKsiazka> sprzedanaKsiazka = new HashSet<>();
-        Random random = new Random();
-        sprzedanaKsiazka.clear();
-        for (int i=0; i< random.nextInt()%10; i++){
-            sprzedanaKsiazka.add(sprzedanaKsiazkaIterator.next());
-        }
-        new Zamowienie(random.nextInt(),"Adres 1",123112233,enumMetodaPlatnosci.KARTA,enumStatus.W_REALIZACJI).addSoldBook(sprzedanaKsiazka);
-        sprzedanaKsiazka.clear();
-        for (int i=0; i< random.nextInt()%10; i++){
-            sprzedanaKsiazka.add(sprzedanaKsiazkaIterator.next());
-        }
-        new Zamowienie(random.nextInt(),"Adres 2",123123111,enumMetodaPlatnosci.KOD_PROMOCYJNY,enumStatus.ANULOWANY).addSoldBook(sprzedanaKsiazka);
-        new Zamowienie(random.nextInt(),"Adres 3",321321321,enumMetodaPlatnosci.KARTA,enumStatus.ANULOWANY).addSoldBook(sprzedanaKsiazkaIterator.next());
-        new Zamowienie(random.nextInt(),"Adres 4",123123123,enumMetodaPlatnosci.GOTOWKA,enumStatus.ZREALIZOWANY).addSoldBook(sprzedanaKsiazkaIterator.next());
-        new Zamowienie(random.nextInt(),"Adres 5",111222333,enumMetodaPlatnosci.KARTA,enumStatus.W_REALIZACJI).addSoldBook(sprzedanaKsiazkaIterator.next());
-
     }
 
     public int getID() {

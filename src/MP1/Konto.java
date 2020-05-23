@@ -1,8 +1,5 @@
 package MP1;
 
-import java.util.Iterator;
-import java.util.Random;
-
 public class Konto extends ObjectPlus {
 
     private int ID;
@@ -40,16 +37,6 @@ public class Konto extends ObjectPlus {
         this.login = login;
         if (haslo == null ){throw new NullPointerException("Hasło nie może być puste.");}
         this.haslo = haslo;
-    }
-
-    public static void main(String[] args) throws ClassNotFoundException, validPhoneNumerException, inputException {
-        Iterator<Data> dataIterator = ObjectPlus.getExtent(Data.class).iterator();
-        Random random = new Random();
-        new Konto(random.nextInt(),"Marta","Martowska","mm1@gmail.com",dataIterator.next(),123123123,"1","1");
-        new Konto(random.nextInt(),"Marcin","Marciniuk","mm2@gmail.com",dataIterator.next(),123123111,"2","2");
-        new Konto(random.nextInt(),"Mariusz","Mariuszewski","mm3@gmail.com",dataIterator.next(),123112233,"3","3");
-        new Konto(random.nextInt(),"Maciek","Maciejewski","mm4@gmail.com",dataIterator.next(),123332211,"4","4");
-        new Konto(random.nextInt(),"Mateusz","Mateuszczyk","mm5@gmail.com", dataIterator.next(),123123321,"5","5");
     }
 
     public int getID() {
